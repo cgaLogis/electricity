@@ -36,12 +36,12 @@ namespace Electricity.WebService.Controllers
         /// По указанному объекту потребления выбрать все счетчики с закончившимся
         ///сроком поверке.
         /// </summary>
-        /// <param name="consumptionObjectId"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet, Route( "GetMetersWhereFaultValidationDate" )]
-        public async Task<List<ElectricityMeterDto>> GetMetersWhereFaultValidationDate(int consumptionObjectId)
+        public async Task<List<ElectricityMeterDto>> GetMetersWhereFaultValidationDate(int id)
         {
-            var items = await _dataService.GetAllElectricityMeter( consumptionObjectId );
+            var items = await _dataService.GetAllElectricityMeter( id );
 
             return items;
         }
@@ -49,12 +49,12 @@ namespace Electricity.WebService.Controllers
         /// <summary>
         /// По указанному объекту потребления выбрать все трансформаторы тока с закончившимся сроком поверке.
         /// </summary>
-        /// <param name="consumptionObjectId"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet, Route( "GetElectricityTransformators" )]
-        public async Task<List<ElectricityTransformatorDto>> GetElectricityTransformators(int consumptionObjectId )
+        public async Task<List<ElectricityTransformatorDto>> GetElectricityTransformators(int id )
         {
-            var items = await _dataService.GetAllElectricityTransformators( consumptionObjectId );
+            var items = await _dataService.GetAllElectricityTransformators( id );
 
             return items;
         }
@@ -62,12 +62,12 @@ namespace Electricity.WebService.Controllers
         /// <summary>
         /// По указанному объекту потребления выбрать все трансформаторы напряжения с закончившимся сроком поверке.
         /// </summary>
-        /// <param name="consumptionObjectId"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet, Route( "GetVoltageTransformators" )]
-        public async Task<List<VoltageTransformatorDto>> GetVoltageTransformators( int consumptionObjectId )
+        public async Task<List<VoltageTransformatorDto>> GetVoltageTransformators( int id )
         {
-            var items = await _dataService.GetAllVoltageTransformators( consumptionObjectId );
+            var items = await _dataService.GetAllVoltageTransformators( id );
 
             return items;
         }

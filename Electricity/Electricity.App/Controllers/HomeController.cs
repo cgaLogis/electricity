@@ -15,7 +15,7 @@ namespace Electricity.App.Controllers
         {
             using ( var client = new HttpClient() )
             {
-                var result = await client.GetAsync( "http://localhost:8050/GetDeliveryPointMeters" );
+                var result = await client.GetAsync( "http://localhost:8050/api/Data/GetDeliveryPointMeters" );
                 ViewBag.items = await result.Content.ReadAsStringAsync();
             }
             return View();
@@ -25,7 +25,7 @@ namespace Electricity.App.Controllers
         {
             using ( var client = new HttpClient() )
             {
-                var result = await client.GetAsync( "http://localhost:8050/GetMetersWhereFaultValidationDate" );
+                var result = await client.GetAsync( "http://localhost:8050/api/Data/GetMetersWhereFaultValidationDate?id=1" );
                 ViewBag.items = await result.Content.ReadAsStringAsync();
             }
             return View();
@@ -36,7 +36,7 @@ namespace Electricity.App.Controllers
         {
             using ( var client = new HttpClient() )
             {
-                var result = await client.GetAsync( "http://localhost:8050/GetElectricityTransformators" );
+                var result = await client.GetAsync( "http://localhost:8050/api/Data/GetElectricityTransformators?id=1" );
                 ViewBag.items = await result.Content.ReadAsStringAsync();
             }
             return View();
@@ -46,7 +46,7 @@ namespace Electricity.App.Controllers
         {
             using ( var client = new HttpClient() )
             {
-                var result = await client.GetAsync( "http://localhost:8050/GetVoltageTransformators" );
+                var result = await client.GetAsync( "http://localhost:8050/api/Data/GetVoltageTransformators?id=1" );
                 ViewBag.items = await result.Content.ReadAsStringAsync();
             }
             return View();

@@ -4,7 +4,7 @@
         <name>Electricity.WebService</name>
     </assembly>
     <members>
-        <member name="M:Electricity.WebService.Controllers.DataController.GetAccountingMeters">
+        <member name="M:Electricity.WebService.Controllers.DataController.GetDeliveryPointMeters">
             <summary>
             Выбрать все расчетные приборы учета в 2018 году.
             </summary>
@@ -15,21 +15,21 @@
              По указанному объекту потребления выбрать все счетчики с закончившимся
             сроком поверке.
              </summary>
-             <param name="consumptionObjectId"></param>
+             <param name="id"></param>
              <returns></returns>
         </member>
         <member name="M:Electricity.WebService.Controllers.DataController.GetElectricityTransformators(System.Int32)">
             <summary>
             По указанному объекту потребления выбрать все трансформаторы тока с закончившимся сроком поверке.
             </summary>
-            <param name="consumptionObjectId"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="M:Electricity.WebService.Controllers.DataController.GetVoltageTransformators(System.Int32)">
             <summary>
             По указанному объекту потребления выбрать все трансформаторы напряжения с закончившимся сроком поверке.
             </summary>
-            <param name="consumptionObjectId"></param>
+            <param name="id"></param>
             <returns></returns>
         </member>
         <member name="T:Electricity.WebService.Core.Mappers.MyMapperProfile">
