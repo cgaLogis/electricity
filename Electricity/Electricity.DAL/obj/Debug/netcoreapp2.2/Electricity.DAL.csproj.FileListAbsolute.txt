@@ -7,4 +7,3 @@ V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electr
 V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.pdb
 V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.runtimeconfig.json
 V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.runtimeconfig.dev.json
-V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.csprojAssemblyReference.cache

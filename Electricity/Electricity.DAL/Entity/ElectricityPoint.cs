@@ -35,5 +35,7 @@ namespace Electricity.DAL.Entity
 
         public virtual ConsumptionObject Object { get; set; }
 
+        public ICollection<ElectricityPointDeliveryPointMeter> ElectricityPointDeliveryPointMeters { get; set; }
+
     }
 }

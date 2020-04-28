@@ -150,6 +150,7 @@ namespace Electricity.DAL.Core
 
         public DbSet<DeliveryPointMeter> DeliveryPointMeters { get; set; }
 
+        public DbSet<ElectricityPointDeliveryPointMeter> ElectricityPointDeliveryPointMeters { get; set; }
 
     }
 }

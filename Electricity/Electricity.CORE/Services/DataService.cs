@@ -74,7 +74,7 @@ namespace Electricity.CORE.Services
 
         public async Task<List<DeliveryPointMeterDto>> GetAllDeliveryPointMeters2018()
         {
-            var listItems = _deliveryPointMetersRepository.GetAll().ToList();
+            var listItems = _deliveryPointMetersRepository.GetAll().Where(e=>e.ElectricityPointDeliveryPointMeters.Any(x=>x.Created.Value.Year == 2018)).ToList();
 
             var listDtos = listItems.Select( e => _mapper.Map<DeliveryPointMeterDto>( e ) ).ToList();
             //var filter = query.Where(e=>e.)
@@ -84,15 +84,14 @@ namespace Electricity.CORE.Services
 
         public async Task<List<ElectricityMeterDto>> GetAllElectricityMeter( int consumptionObjectId )
         {
-            var items = _electricityPointRepository.GetAll()
+            var query = _electricityPointRepository.GetAll()
                 .Include(e=>e.VoltageTransformator)
                 .Include(e=>e.ElectricityMeter)
-                .Include(e=>e.ElectricityTransformator);
+                .Include(e=>e.ElectricityTransformator)
+                .Include(e=>e.Object);
 
-            var filterTest = items.ToList();
-
-            var filterData = items
-                .Where( e => e.ObjectId == consumptionObjectId )
+            var filterData = query
+                .Where( e => e.ObjectId == consumptionObjectId && e.ElectricityMeter.ValidationDate <= DateTime.Now.AddYears(-1) )
                 .Select( e => e.ElectricityMeter)
                 .ToList();
 
@@ -108,12 +107,16 @@ namespace Electricity.CORE.Services
         /// <returns></returns>
         public async Task<List<ElectricityTransformatorDto>> GetAllElectricityTransformators( int consumptionObjectId )
         {
-            var items = _electricityPointRepository.GetAll();
+            var items = _electricityPointRepository.GetAll()
+                .Include( e => e.VoltageTransformator )
+                .Include( e => e.ElectricityMeter )
+                .Include( e => e.ElectricityTransformator )
+                .Include( e => e.Object );
 
             var filterTest = items.ToList();
 
             var filter = items
-                .Where( e => e.ObjectId == consumptionObjectId )
+                .Where( e => e.ObjectId == consumptionObjectId && e.ElectricityTransformator.ValidationDate <= DateTime.Now.AddYears( -1 ) )
                 .Select( e => _mapper.Map<ElectricityTransformatorDto>( e.ElectricityTransformator ) )
                 .ToList();
 
@@ -127,12 +130,16 @@ namespace Electricity.CORE.Services
         /// <returns></returns>
         public async Task<List<VoltageTransformatorDto>> GetAllVoltageTransformators( int consumptionObjectId )
         {
-            var items = _electricityPointRepository.GetAll();
+            var items = _electricityPointRepository.GetAll()
+                .Include( e => e.VoltageTransformator )
+                .Include( e => e.ElectricityMeter )
+                .Include( e => e.ElectricityTransformator )
+                .Include( e => e.Object );
 
             var filterTest = items.ToList();
 
             var filter = items
-                .Where( e => e.ObjectId == consumptionObjectId )
+                .Where( e => e.ObjectId == consumptionObjectId && e.VoltageTransformator.ValidationDate <= DateTime.Now.AddYears(-1))
                 .Select( e => _mapper.Map<VoltageTransformatorDto>( e.VoltageTransformator ) )
                 .ToList();
 

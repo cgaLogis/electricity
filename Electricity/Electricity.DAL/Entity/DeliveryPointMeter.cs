@@ -15,5 +15,7 @@ namespace Electricity.DAL.Entity
 
         public DeliveryPoint DeliveryPoint { get; set; }
 
+        public ICollection<ElectricityPointDeliveryPointMeter> ElectricityPointDeliveryPointMeters { get; set; }
+
     }
 }
