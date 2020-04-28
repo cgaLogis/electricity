@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Electricity.App.Models;
 using System.Net.Http;
+using Newtonsoft.Json;
+using Electricity.DTO.Dtos;
 
 namespace Electricity.App.Controllers
 {
@@ -23,33 +25,55 @@ namespace Electricity.App.Controllers
 
         public async Task<IActionResult> First()
         {
+            var model = new FirstVm();
+
             using ( var client = new HttpClient() )
             {
                 var result = await client.GetAsync( "http://localhost:8050/api/Data/GetMetersWhereFaultValidationDate?id=1" );
-                ViewBag.items = await result.Content.ReadAsStringAsync();
+                
+                var resultString = await result.Content.ReadAsStringAsync();
+                
+                var data = JsonConvert.DeserializeObject<List<ElectricityMeterDto>>( resultString );
+                
+                model.Items = data;
             }
-            return View();
+            return View(model);
         }
 
 
         public async Task<IActionResult> Second()
         {
+            var model = new SecondVm();
+
             using ( var client = new HttpClient() )
             {
                 var result = await client.GetAsync( "http://localhost:8050/api/Data/GetElectricityTransformators?id=1" );
-                ViewBag.items = await result.Content.ReadAsStringAsync();
+                
+                var resultString = await result.Content.ReadAsStringAsync();
+
+                var data = JsonConvert.DeserializeObject<List<ElectricityTransformatorDto>>( resultString );
+
+                model.Items = data;
             }
-            return View();
+
+            return View( model );
         }
 
         public async Task<IActionResult> Third()
         {
+            var model = new ThirdVm();
+
             using ( var client = new HttpClient() )
             {
                 var result = await client.GetAsync( "http://localhost:8050/api/Data/GetVoltageTransformators?id=1" );
-                ViewBag.items = await result.Content.ReadAsStringAsync();
+
+                var resultString = await result.Content.ReadAsStringAsync();
+
+                var data = JsonConvert.DeserializeObject<List<VoltageTransformatorDto>>( resultString );
+
+                model.Items = data;
             }
-            return View();
+            return View( model );
         }
 
         [ResponseCache( Duration = 0, Location = ResponseCacheLocation.None, NoStore = true )]

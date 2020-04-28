@@ -32,3 +32,5 @@ V:\GitHub\Electricity\Electricity\Electricity.App\obj\Debug\netcoreapp2.2\Electr
 V:\GitHub\Electricity\Electricity\Electricity.App\obj\Debug\netcoreapp2.2\Razor\Views\Home\First.cshtml.g.cs
 V:\GitHub\Electricity\Electricity\Electricity.App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Second.cshtml.g.cs
 V:\GitHub\Electricity\Electricity\Electricity.App\obj\Debug\netcoreapp2.2\Razor\Views\Home\Third.cshtml.g.cs
+V:\GitHub\Electricity\Electricity\Electricity.App\bin\Debug\netcoreapp2.2\Electricity.DTO.dll
+V:\GitHub\Electricity\Electricity\Electricity.App\bin\Debug\netcoreapp2.2\Electricity.DTO.pdb

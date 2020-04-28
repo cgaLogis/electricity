@@ -1,9 +1,31 @@
-﻿
+﻿@model  FirstVm
 @{
     ViewData["Title"] = "First";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>First</h1>
+<h1>Задание №1</h1>
 
-<div>@ViewBag.items</div>
+<div class="container">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="text-black-50">Id</th>
+                    <th class="text-black-50">NUmber</th>
+                    <th class="text-black-50">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ( var item in Model.Items )
+                {
+                    <tr class="d-table-row">
+                        <td class="d-table-cell">@item.Id</td>
+                        <td class="d-table-cell">@item.Number</td>
+                        <td class="d-table-cell">@item.ValidationDate</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

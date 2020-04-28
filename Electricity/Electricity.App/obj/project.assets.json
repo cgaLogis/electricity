@@ -4720,6 +4720,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Electricity.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/Electricity.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Electricity.DTO.dll": {}
+        }
       }
     }
   },
@@ -12918,10 +12928,16 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Electricity.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Electricity.DTO/Electricity.DTO.csproj",
+      "msbuildProject": "../Electricity.DTO/Electricity.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "Electricity.DTO >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -12960,7 +12976,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "V:\\GitHub\\Electricity\\Electricity\\Electricity.DTO\\Electricity.DTO.csproj": {
+              "projectPath": "V:\\GitHub\\Electricity\\Electricity\\Electricity.DTO\\Electricity.DTO.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
