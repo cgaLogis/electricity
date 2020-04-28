@@ -1,0 +1,9 @@
+V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.deps.json
+V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.dll
+V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.pdb
+V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.AssemblyInfoInputs.cache
+V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.AssemblyInfo.cs
+V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.dll
+V:\GitHub\Electricity\Electricity\Electricity.DAL\obj\Debug\netcoreapp2.2\Electricity.DAL.pdb
+V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.runtimeconfig.json
+V:\GitHub\Electricity\Electricity\Electricity.DAL\bin\Debug\netcoreapp2.2\Electricity.DAL.runtimeconfig.dev.json

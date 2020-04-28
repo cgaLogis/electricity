@@ -1,0 +1,11 @@
+V:\GitHub\Electricity\Electricity\Electricity.CORE\bin\Debug\netcoreapp3.1\Electricity.CORE.deps.json
+V:\GitHub\Electricity\Electricity\Electricity.CORE\bin\Debug\netcoreapp3.1\Electricity.CORE.dll
+V:\GitHub\Electricity\Electricity\Electricity.CORE\bin\Debug\netcoreapp3.1\Electricity.CORE.pdb
+V:\GitHub\Electricity\Electricity\Electricity.CORE\bin\Debug\netcoreapp3.1\Electricity.DTO.dll
+V:\GitHub\Electricity\Electricity\Electricity.CORE\bin\Debug\netcoreapp3.1\Electricity.DTO.pdb
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.csprojAssemblyReference.cache
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.AssemblyInfoInputs.cache
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.AssemblyInfo.cs
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.csproj.CopyComplete
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.dll
+V:\GitHub\Electricity\Electricity\Electricity.CORE\obj\Debug\netcoreapp3.1\Electricity.CORE.pdb

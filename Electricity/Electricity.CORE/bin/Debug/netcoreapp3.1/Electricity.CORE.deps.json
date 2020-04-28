@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Electricity.CORE/1.0.0": {
+        "dependencies": {
+          "Electricity.DTO": "1.0.0"
+        },
+        "runtime": {
+          "Electricity.CORE.dll": {}
+        }
+      },
+      "Electricity.DTO/1.0.0": {
+        "runtime": {
+          "Electricity.DTO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Electricity.CORE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Electricity.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

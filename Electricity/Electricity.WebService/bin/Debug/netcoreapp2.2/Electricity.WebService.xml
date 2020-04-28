@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Electricity.WebService</name>
+    </assembly>
+    <members>
+        <member name="M:Electricity.WebService.Controllers.DataController.GetAccountingMeters">
+            <summary>
+            Выбрать все расчетные приборы учета в 2018 году.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Electricity.WebService.Controllers.DataController.GetMetersWhereFaultValidationDate(System.Int32)">
+             <summary>
+             По указанному объекту потребления выбрать все счетчики с закончившимся
+            сроком поверке.
+             </summary>
+             <param name="consumptionObjectId"></param>
+             <returns></returns>
+        </member>
+        <member name="M:Electricity.WebService.Controllers.DataController.GetElectricityTransformators(System.Int32)">
+            <summary>
+            По указанному объекту потребления выбрать все трансформаторы тока с закончившимся сроком поверке.
+            </summary>
+            <param name="consumptionObjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Electricity.WebService.Controllers.DataController.GetVoltageTransformators(System.Int32)">
+            <summary>
+            По указанному объекту потребления выбрать все трансформаторы напряжения с закончившимся сроком поверке.
+            </summary>
+            <param name="consumptionObjectId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Electricity.WebService.Core.Mappers.MyMapperProfile">
+            <summary>
+            маппинг
+            </summary>
+        </member>
+        <member name="M:Electricity.WebService.Core.Mappers.MyMapperProfile.#ctor">
+            <summary>
+            маппинг
+            </summary>
+        </member>
+    </members>
+</doc>

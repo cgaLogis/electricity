@@ -1,0 +1,7 @@
+V:\GitHub\Electricity\Electricity\Electricity.DTO\bin\Debug\netcoreapp2.2\Electricity.DTO.deps.json
+V:\GitHub\Electricity\Electricity\Electricity.DTO\bin\Debug\netcoreapp2.2\Electricity.DTO.dll
+V:\GitHub\Electricity\Electricity\Electricity.DTO\bin\Debug\netcoreapp2.2\Electricity.DTO.pdb
+V:\GitHub\Electricity\Electricity\Electricity.DTO\obj\Debug\netcoreapp2.2\Electricity.DTO.AssemblyInfoInputs.cache
+V:\GitHub\Electricity\Electricity\Electricity.DTO\obj\Debug\netcoreapp2.2\Electricity.DTO.AssemblyInfo.cs
+V:\GitHub\Electricity\Electricity\Electricity.DTO\obj\Debug\netcoreapp2.2\Electricity.DTO.dll
+V:\GitHub\Electricity\Electricity\Electricity.DTO\obj\Debug\netcoreapp2.2\Electricity.DTO.pdb
