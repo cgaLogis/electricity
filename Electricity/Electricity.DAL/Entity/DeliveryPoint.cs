@@ -19,6 +19,6 @@ namespace Electricity.DAL.Entity
 
         public ConsumptionObject ConsumptionObject { get; set; }
 
-        public List<DeliveryPointMeter> DeliveryPointMeters { get; set; }
+        public ICollection<DeliveryPointMeter> DeliveryPointMeters { get; set; }
     }
 }

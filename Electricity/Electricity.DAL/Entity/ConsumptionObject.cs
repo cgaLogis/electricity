@@ -19,9 +19,9 @@ namespace Electricity.DAL.Entity
 
         public ChildOrganization Organization { get; set; }
 
-        public List<ElectricityPoint> Points { get; set; }
+        public ICollection<ElectricityPoint> Points { get; set; }
 
-        public List<DeliveryPoint> DeliveryPoints { get; set; }
+        public ICollection<DeliveryPoint> DeliveryPoints { get; set; }
 
     }
 }

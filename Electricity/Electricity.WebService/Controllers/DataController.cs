@@ -1,5 +1,7 @@
-﻿using Electricity.CORE.Services;
+﻿using AutoMapper;
+using Electricity.CORE.Services;
 using Electricity.DTO.Dtos;
+using Electricity.WebService.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,9 +16,13 @@ namespace Electricity.WebService.Controllers
     {
         private IDataService _dataService;
 
-        public DataController( IDataService dataService )
+        private IMapper _mapper;
+
+        public DataController( IDataService dataService,IMapper mapper )
         {
             _dataService = dataService;
+
+            _mapper = mapper;
         }
 
 
@@ -42,6 +48,8 @@ namespace Electricity.WebService.Controllers
         public async Task<List<ElectricityMeterDto>> GetMetersWhereFaultValidationDate(int id)
         {
             var items = await _dataService.GetAllElectricityMeter( id );
+
+            
 
             return items;
         }
@@ -72,11 +80,30 @@ namespace Electricity.WebService.Controllers
             return items;
         }
 
+        /// <summary>
+        /// Добавить новую точку измерения с указанием счетчика, трансформатора тока
+        ///и трансформатора напряжения.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task<ElectricityPointDto> Post(ElectricityPointDto model)
+        public async Task<IActionResult> Post( ElectricityPointModel model )
         {
-            var res = _dataService.AddElectricityPoint(model);
-            return model;
+            if(model == null )
+            {
+                return BadRequest();
+            }
+
+            if ( !ModelState.IsValid )
+            {
+                return BadRequest( ModelState );
+            }
+
+            var dto = _mapper.Map<ElectricityPointDto>( model );
+
+            var res = await _dataService.AddElectricityPoint( dto );
+
+            return Ok(res);
         }
 
     }

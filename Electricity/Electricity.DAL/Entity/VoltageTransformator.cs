@@ -20,7 +20,7 @@ namespace Electricity.DAL.Entity
 
         public VoltageTransformatorType? Type { get; set; }
 
-        public int ElectricityPointId { get; set; }
+        public int? ElectricityPointId { get; set; }
 
         [ForeignKey( "ElectricityPointId" )]
         public ElectricityPoint ElectricityPoint { get; set; }

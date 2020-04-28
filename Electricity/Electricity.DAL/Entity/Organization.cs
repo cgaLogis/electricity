@@ -14,7 +14,7 @@ namespace Electricity.DAL.Entity
 
         public string Address { get; set; }
 
-        public List<ChildOrganization> ChildOrganizations { get; set; }
+        public ICollection<ChildOrganization> ChildOrganizations { get; set; }
 
     }
 }

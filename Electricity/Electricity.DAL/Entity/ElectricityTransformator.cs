@@ -20,7 +20,7 @@ namespace Electricity.DAL.Entity
 
         public DateTime? ValidationDate { get; set; }
 
-        public int ElectricityPointId { get; set; }
+        public int? ElectricityPointId { get; set; }
 
         [ForeignKey( "ElectricityPointId" )]
         public ElectricityPoint ElectricityPoint { get; set; }

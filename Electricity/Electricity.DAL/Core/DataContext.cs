@@ -57,6 +57,11 @@ namespace Electricity.DAL.Core
                 .Entity<ElectricityPoint>()
                 .HasKey( e => e.Id );
 
+            //modelBuilder
+            //    .Entity<ElectricityPoint>()
+            //    .HasOne<ConsumptionObject>( e => e.Object );
+
+
             modelBuilder
                .Entity<ElectricityMeter>()
                .HasKey( e => e.Id );

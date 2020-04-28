@@ -194,6 +194,90 @@ namespace Electricity.DAL.Core.Seeder
 
             builder.Entity<DeliveryPointMeter>().HasData( dpm1, dpm2, dpm3, dpm4, dpm5 );
 
+            var em1 = new ElectricityMeter()
+            {
+                Id = 1,
+                ElectricityPointId = 1,
+                Number = "KakoitoNomer",
+                Type = Enums.ElectricityMeterType.One,
+                ValidationDate = DateTime.Parse( "02.02.2012" )
+            };
+            var em2 = new ElectricityMeter()
+            {
+                Id = 2,
+                ElectricityPointId = 2,
+                Number = "KakoitoNomer",
+                Type = Enums.ElectricityMeterType.One,
+                ValidationDate = DateTime.Parse( "02.02.2017" )
+            };
+
+            builder.Entity<ElectricityMeter>().HasData( em1,em2 );
+
+            var et1 = new ElectricityTransformator()
+            {
+                Id = 1,
+                ElectricityPointId = 1,
+                KTT = 12312,
+                Type = Enums.ElectricityTransformatorType.One,
+                Number = "123123123",
+                ValidationDate = DateTime.Parse( "02.02.2012" )
+            };
+            var et2 = new ElectricityTransformator()
+            {
+                Id = 2,
+                ElectricityPointId = 2,
+                KTT = 12312,
+                Type = Enums.ElectricityTransformatorType.One,
+                Number = "123123123",
+                ValidationDate = DateTime.Parse( "02.02.2017" )
+            };
+
+            builder.Entity<ElectricityTransformator>().HasData( et1,et2 );
+
+            var vt1 = new VoltageTransformator()
+            {
+                Id = 1,
+                ElectricityPointId = 1,
+                KTN = 123123,
+                Number = "123123",
+                Type = Enums.VoltageTransformatorType.One,
+                ValidationDate = DateTime.Parse( "02.02.2012" )
+            };
+
+            var vt2 = new VoltageTransformator()
+            {
+                Id = 2,
+                ElectricityPointId = 2,
+                KTN = 123123,
+                Number = "123123",
+                Type = Enums.VoltageTransformatorType.One,
+                ValidationDate = DateTime.Parse( "02.02.2017" )
+            };
+
+            builder.Entity<VoltageTransformator>().HasData( vt1,vt2 );
+
+            var ep1 = new ElectricityPoint()
+            {
+                Id = 1,
+                Name = "Hello I'm point",
+                ObjectId = 1,
+                ElectricityMeterId = 1,
+                ElectricityTransformatorId = 1,
+                VoltageTransformatorId = 1
+            };
+
+            var ep2 = new ElectricityPoint()
+            {
+                Id = 2,
+                Name = "Hello I'm point",
+                ObjectId = 1,
+                ElectricityMeterId = 2,
+                ElectricityTransformatorId =2 ,
+                VoltageTransformatorId =2 
+            };
+
+            builder.Entity<ElectricityPoint>().HasData( ep1, ep2 );
+
         }
 
         private static void SeedConsumptionObjects(this ModelBuilder builder )

@@ -20,7 +20,7 @@ namespace Electricity.DAL.Entity
         
         public Organization Parent { get; set; }
 
-        public List<ConsumptionObject> Objects { get; set; }
+        public ICollection<ConsumptionObject> Objects { get; set; }
 
     }
 }

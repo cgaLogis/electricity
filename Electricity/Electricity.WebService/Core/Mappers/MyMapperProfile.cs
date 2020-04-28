@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Electricity.DAL.Entity;
 using Electricity.DTO.Dtos;
+using Electricity.WebService.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,15 @@ namespace Electricity.WebService.Core.Mappers
             CreateMap<ElectricityMeter, ElectricityMeterDto>().ReverseMap();
             CreateMap<ElectricityTransformator, ElectricityTransformatorDto>().ReverseMap();
             CreateMap<VoltageTransformator, VoltageTransformatorDto>().ReverseMap();
-            CreateMap<DeliveryPointMeter, DeliveryPointMeterDto>().ReverseMap(); 
+            CreateMap<DeliveryPointMeter, DeliveryPointMeterDto>().ReverseMap();
+
+
+            // api models => dto
+
+            CreateMap<ElectricityPointModel, ElectricityPointDto>().ReverseMap();
+            CreateMap<ElectricityTransformatorModel, ElectricityTransformatorDto>().ReverseMap();
+            CreateMap<ElectricityMeterModel, ElectricityMeterDto>().ReverseMap();
+            CreateMap<VoltageTransformatorModel, VoltageTransformatorDto>().ReverseMap();
         }
     }
 }

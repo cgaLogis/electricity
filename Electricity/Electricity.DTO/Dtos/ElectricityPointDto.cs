@@ -10,7 +10,7 @@ namespace Electricity.DTO.Dtos
 
         public string Name { get; set; }
 
-        public ElectricityMeterDto ElectMeter { get; set; }
+        public ElectricityMeterDto ElectricityMeter { get; set; }
 
         public ElectricityTransformatorDto ElectricityTransformator { get; set; }
 

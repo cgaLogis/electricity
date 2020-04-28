@@ -32,6 +32,14 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="M:Electricity.WebService.Controllers.DataController.Post(Electricity.WebService.Models.ElectricityPointModel)">
+             <summary>
+             Добавить новую точку измерения с указанием счетчика, трансформатора тока
+            и трансформатора напряжения.
+             </summary>
+             <param name="model"></param>
+             <returns></returns>
+        </member>
         <member name="T:Electricity.WebService.Core.Mappers.MyMapperProfile">
             <summary>
             маппинг
